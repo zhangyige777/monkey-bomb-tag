@@ -7,7 +7,7 @@ const tiers: string[] = ['S','A','B','C','D'];
 const TC: Record<string,{c:string,b:string}> = {S:{c:'text-red-400',b:'bg-red-500/10 border-red-500/30'},A:{c:'text-orange-400',b:'bg-orange-500/10 border-orange-500/30'},B:{c:'text-yellow-400',b:'bg-yellow-500/10 border-yellow-500/30'},C:{c:'text-blue-400',b:'bg-blue-500/10 border-blue-500/30'},D:{c:'text-gray-400',b:'bg-gray-500/10 border-gray-500/30'}};
 const RC: Record<string,string> = {Common:'bg-gray-200 dark:bg-gray-700 text-gray-600',Uncommon:'bg-green-200 dark:bg-green-900 text-green-700',Rare:'bg-blue-200 dark:bg-blue-900 text-blue-700',Epic:'bg-purple-200 dark:bg-purple-900 text-purple-700',Legendary:'bg-amber-200 dark:bg-amber-900 text-amber-700'};
 ---
-<BaseLayout title="Best Tails — Complete Tier List" description="All tails ranked S to D with drop rates and how to get each one." path="/best-tails/">
+<BaseLayout title="Monkey Bomb Tag Best Tails — Complete Tier List" description="All Monkey Bomb Tag tails ranked from best to worst. Tier list with drop rates and how to get each tail." path="/best-tails/">
 <JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Best Tails',item:'https://monkey-bomb-tag.pages.dev/best-tails/'}]}]} />
 <div class="max-w-5xl mx-auto px-4 py-10">
   <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">🐒 Best Tails — Tier List</h1>
@@ -20,6 +20,6 @@ const RC: Record<string,string> = {Common:'bg-gray-200 dark:bg-gray-700 text-gra
       <p class="text-xs text-gray-500 mt-1">Source: {t.source} · ~{Math.ceil(1/t.dropRate)} opens</p>
     </div>))}</div>
   </section>);})}
-  <div class="mt-6 flex flex-wrap gap-2"><a href="/best-cases" class="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold">📦 Best Cases</a><a href="/codes" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">🎫 Free Codes</a></div>
+  <div class="mt-6 flex flex-wrap gap-2"><a href="/best-cases/" class="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold">📦 Best Cases</a><a href="/codes/" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">🎫 Free Codes</a></div>
 </div>
 </BaseLayout>

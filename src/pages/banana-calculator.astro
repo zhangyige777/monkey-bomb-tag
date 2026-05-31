@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLd from '@/components/JsonLd.astro';
 ---
-<BaseLayout title="Banana Earnings Calculator" description="Calculate how many Bananas you earn per hour in Monkey Bomb Tag. Compare modes and estimate time to unlock cases." path="/banana-calculator/">
+<BaseLayout title="Monkey Bomb Tag Banana Earnings Calculator" description="Calculate how many Bananas you earn per hour in Monkey Bomb Tag. Compare game modes and estimate time." path="/banana-calculator/">
 <JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Banana Calculator',item:'https://monkey-bomb-tag.pages.dev/banana-calculator/'}]}]} />
 <div class="max-w-3xl mx-auto px-4 py-10">
   <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">🍌 Banana Earnings Calculator</h1>
@@ -18,8 +18,8 @@ import JsonLd from '@/components/JsonLd.astro';
     <div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/20 border border-blue-200 text-center"><div class="text-xs text-gray-500">500🍌 in</div><div id="t500" class="text-2xl font-black text-blue-500">94min</div></div>
   </div>
   <div class="mt-6 flex flex-wrap gap-2">
-    <a href="/codes" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">🎫 Free Codes</a>
-    <a href="/case-calculator" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">🧮 Case Calculator</a>
+    <a href="/codes/" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">🎫 Free Codes</a>
+    <a href="/case-calculator/" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">🧮 Case Calculator</a>
   </div>
 </div>
 <script is:inline>

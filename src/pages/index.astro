@@ -21,38 +21,60 @@ const desc = 'Working codes, best cases & tails tier list, bomb timer, calculato
 
 <section class="bg-gradient-to-br from-green-50 via-emerald-50 to-amber-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 py-12 px-4">
   <div class="max-w-5xl mx-auto text-center">
-    <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-4"><span class="text-green-500">🐒</span> Monkey Bomb Tag</h1>
-    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">Codes, tools, tier lists & guides — everything you need.</p>
+    <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-4">Monkey Bomb Tag Guide &amp; Tools</h1>
+    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">Codes, tools, tier lists &amp; guides — everything you need for Monkey Bomb Tag on Roblox.</p>
     <div class="flex flex-col sm:flex-row justify-center gap-3">
-      <a href="/codes" class="px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-colors">🎫 Codes ({activeCodes.length} Active)</a>
-      <a href="/bomb-timer" class="px-6 py-3 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-600 transition-colors">💣 Bomb Timer</a>
-      <a href="/case-calculator" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">🧮 Calculator</a>
+      <a href="/codes/" class="px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-colors">Codes ({activeCodes.length} Active)</a>
+      <a href="/bomb-timer/" class="px-6 py-3 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-600 transition-colors">Bomb Timer</a>
+      <a href="/case-calculator/" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">Calculator</a>
     </div>
   </div>
 </section>
 
 <section class="max-w-5xl mx-auto px-4 py-10">
+  <h2 class="text-xl font-extrabold mb-6 text-center">What is Monkey Bomb Tag?</h2>
+  <div class="max-w-3xl mx-auto prose dark:prose-invert text-sm text-gray-600 dark:text-gray-400">
+    <p>Monkey Bomb Tag is a popular Roblox party game where players pass a ticking bomb by tagging each other. The last monkey standing wins! With over <strong>{config.stats.visits}</strong> visits and a <strong>91%</strong> rating, it's one of the fastest-growing tag games on Roblox. Collect <strong>Bananas</strong> to open <strong>Cases</strong> for Tails, Bomb Skins, Effects and Emotes. Play Classic, Ranked, Duels and Weekly Quests modes.</p>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-6">
+  <h2 class="text-xl font-extrabold mb-6 text-center">Best Tools for Players</h2>
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
     {[
-      {href:'/codes',e:'🎫',t:'Codes',d:'Working promo codes'},
-      {href:'/tier-list',e:'🏆',t:'Tier List',d:'S-C rankings'},
-      {href:'/best-cases',e:'📦',t:'Best Cases',d:'ROI analysis'},
-      {href:'/best-tails',e:'🐒',t:'Best Tails',d:'All tails ranked'},
-      {href:'/bomb-timer',e:'💣',t:'Bomb Timer',d:'Practice the timer'},
-      {href:'/survival-calculator',e:'📊',t:'Survival Odds',d:'Win probability'},
-      {href:'/banana-calculator',e:'🍌',t:'Banana Calc',d:'Earnings calculator'},
-      {href:'/case-calculator',e:'🧮',t:'Case Calc',d:'Drop rate calculator'},
-      {href:'/beginner-guide',e:'📖',t:'Guide',d:'How to play & win'},
-      {href:'/banana-farm-guide',e:'🍌',t:'Farm Guide',d:'Fastest Bananas'},
-      {href:'/wiki',e:'📚',t:'Wiki',d:'Maps, modes & items'},
-      {href:'/updates',e:'🆕',t:'Updates',d:'Patch notes'},
+      {href:'/codes/',t:'Codes',d:'Working promo codes'},
+      {href:'/tier-list/',t:'Tier List',d:'S-C rankings'},
+      {href:'/best-cases/',t:'Best Cases',d:'ROI analysis'},
+      {href:'/best-tails/',t:'Best Tails',d:'All tails ranked'},
+      {href:'/bomb-timer/',t:'Bomb Timer',d:'Practice the timer'},
+      {href:'/survival-calculator/',t:'Survival Odds',d:'Win probability'},
+      {href:'/banana-calculator/',t:'Banana Calc',d:'Earnings calculator'},
+      {href:'/case-calculator/',t:'Case Calc',d:'Drop rate calculator'},
+      {href:'/beginner-guide/',t:'Beginner Guide',d:'How to play & win'},
+      {href:'/banana-farm-guide/',t:'Farm Guide',d:'Fastest Bananas'},
+      {href:'/wiki/',t:'Wiki',d:'Maps, modes & items'},
+      {href:'/updates/',t:'Updates',d:'Patch notes'},
     ].map(l => (
       <a href={l.href} class="block p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-        <div class="text-xl mb-1">{l.e}</div>
         <div class="font-bold text-sm">{l.t}</div>
         <div class="text-xs text-gray-500">{l.d}</div>
       </a>
     ))}
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-6 border-t border-gray-200 dark:border-gray-800">
+  <h2 class="text-xl font-extrabold mb-4 text-center">Active Codes Preview</h2>
+  <div class="max-w-xl mx-auto">
+    <div class="space-y-2">
+      {activeCodes.slice(0,3).map(code => (
+        <div class="flex items-center justify-between p-3 rounded-lg bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900">
+          <span class="font-mono font-bold text-green-700 dark:text-green-400">{code.code}</span>
+          <span class="text-xs text-gray-600 dark:text-gray-400">{code.reward}</span>
+        </div>
+      ))}
+    </div>
+    <p class="text-center mt-3"><a href="/codes/" class="text-green-600 hover:underline text-sm font-semibold">View all {activeCodes.length} active codes &rarr;</a></p>
   </div>
 </section>
 
@@ -72,9 +94,11 @@ const desc = 'Working codes, best cases & tails tier list, bomb timer, calculato
 <section class="max-w-3xl mx-auto px-4 py-10 border-t border-gray-200 dark:border-gray-800">
   <h2 class="text-xl font-extrabold mb-6 text-center">FAQ</h2>
   <div class="space-y-3">
-    <FAQItem question="How do I redeem codes?" answer="Find the codes chest in the lobby (left side), enter your code, and claim." />
-    <FAQItem question="What are Bananas for?" answer="In-game currency to buy Cases with Tails, Bomb Skins, Effects & Emotes." />
-    <FAQItem question="Is it free?" answer="Yes! Monkey Bomb Tag is free on Roblox. All cosmetics are earnable through gameplay." />
+    <FAQItem question="What is Monkey Bomb Tag?" answer="Monkey Bomb Tag is a free Roblox party game by Crazay Games (Syn). Players pass a ticking bomb by tagging — last monkey standing wins! Collect Bananas, open Cases and customize your monkey with Tails, Bomb Skins, Effects and Emotes." />
+    <FAQItem question="How do I redeem codes?" answer="Find the codes chest in the lobby (left side), enter your code, and claim. Check our Codes page for all working codes updated regularly." />
+    <FAQItem question="What are Bananas for?" answer="Bananas are the in-game currency used to buy Cases. Cases contain Tails, Bomb Skins, Effects & Emotes of varying rarity from Common to Legendary." />
+    <FAQItem question="What are the best cases to open?" answer="Void Crate (500 Bananas) has the best overall drop rates for Epic and Legendary items. Tails Case (250 Bananas) is the best budget option. See our Best Cases page for full ROI analysis." />
+    <FAQItem question="Is Monkey Bomb Tag free?" answer="Yes! Monkey Bomb Tag is completely free on Roblox (PC, Mobile, Xbox). All cosmetics are earnable through gameplay — no pay-to-win." />
   </div>
 </section>
 </BaseLayout>

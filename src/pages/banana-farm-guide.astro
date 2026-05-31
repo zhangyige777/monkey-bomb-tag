@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLd from '@/components/JsonLd.astro';
 ---
-<BaseLayout title="Banana Farming Guide" description="Fastest ways to earn Bananas. Hourly rates, gamepass ROI, time-to-save estimates." path="/banana-farm-guide/">
+<BaseLayout title="Monkey Bomb Tag Banana Farming Guide — Fast Earnings" description="Fastest ways to earn Bananas in Monkey Bomb Tag. Compare Classic, Duels and Ranked modes for max earnings." path="/banana-farm-guide/">
 <JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Banana Farm Guide',item:'https://monkey-bomb-tag.pages.dev/banana-farm-guide/'}]}]} />
 <div class="max-w-5xl mx-auto px-4 py-10">
   <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">🍌 Banana Farming Guide</h1>
@@ -10,6 +10,6 @@ import JsonLd from '@/components/JsonLd.astro';
   <section class="mb-8"><table class="w-full text-sm"><thead><tr class="border-b border-gray-200 dark:border-gray-800"><th class="text-left py-2">Method</th><th class="text-right py-2">🍌/Hour</th><th class="text-left py-2">Notes</th></tr></thead><tbody>{[{m:'🎁 Codes',r:'500-2,000',n:'Instant!'},{m:'🏆 Win Classic',r:'400-600',n:'30-50/win'},{m:'⚔️ Duels',r:'350-500',n:'Quick rounds'},{m:'📋 Quests',r:'200-500',n:'Weekly bonus'}].map(r=>(<tr class="border-b border-gray-100 dark:border-gray-900"><td class="py-2 font-bold">{r.m}</td><td class="py-2 text-right font-mono text-amber-500">{r.r}</td><td class="py-2 text-xs text-gray-500">{r.n}</td></tr>))}</tbody></table></section>
   <section class="mb-8 p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200"><h2 class="font-bold text-sm mb-2">💳 Gamepass ROI</h2><p class="text-xs text-gray-600"><strong>2x Bananas (199 R$)</strong> — Doubles earnings. Best value. <strong>VIP (299 R$)</strong> — Cosmetics only, no banana boost.</p></section>
   <section class="mb-8"><h2 class="text-lg font-bold mb-3">Time to Save</h2><div class="grid grid-cols-3 gap-3">{[{n:'Tails Case',p:250,t:'~30min'},{n:'Effects',p:300,t:'~35min'},{n:'Void Crate',p:500,t:'~60min'}].map(c=>(<div class="p-3 rounded-xl border border-gray-200 dark:border-gray-800 text-center"><div class="font-bold text-sm">{c.n}</div><div class="text-xl font-black text-amber-500">🍌{c.p}</div><div class="text-xs text-gray-500">{c.t}</div></div>))}</div></section>
-  <div class="flex flex-wrap gap-2"><a href="/codes" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">🎫 Free Codes</a><a href="/banana-calculator" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">🍌 Calculator</a></div>
+  <div class="flex flex-wrap gap-2"><a href="/codes/" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">🎫 Free Codes</a><a href="/banana-calculator/" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">🍌 Calculator</a></div>
 </div>
 </BaseLayout>

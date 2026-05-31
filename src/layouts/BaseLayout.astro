@@ -14,7 +14,7 @@ interface Props {
 
 const { title, description, path, canonical, ogImage } = Astro.props;
 const url = canonical || `${SITE}${path}`;
-const image = ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.jpg`;
+const image = ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.svg`;
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -61,13 +61,13 @@ const image = ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.jpg`;
         <span class="text-xs text-gray-400 ml-2 font-normal hidden sm:inline">Guide & Tools</span>
       </a>
       <nav class="flex items-center gap-1 text-sm font-medium overflow-x-auto max-w-[60vw]">
-        <a href="/codes" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Codes</a>
-        <a href="/tier-list" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Tier List</a>
-        <a href="/bomb-timer" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Timer</a>
-        <a href="/case-calculator" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Calculator</a>
-        <a href="/beginner-guide" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Guide</a>
-        <a href="/wiki" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Wiki</a>
-        <a href="/updates" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Updates</a>
+        <a href="/codes/" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Codes</a>
+        <a href="/tier-list/" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Tier List</a>
+        <a href="/bomb-timer/" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Timer</a>
+        <a href="/case-calculator/" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Calculator</a>
+        <a href="/beginner-guide/" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Guide</a>
+        <a href="/wiki/" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Wiki</a>
+        <a href="/updates/" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Updates</a>
       </nav>
     </div>
   </header>
@@ -127,9 +127,10 @@ const image = ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.jpg`;
   <footer class="border-t border-gray-200 dark:border-gray-800 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
       <div class="flex justify-center gap-4 mb-3">
-        <a href="/about" class="hover:underline">About</a>
-        <a href="/privacy-policy" class="hover:underline">Privacy</a>
-        <a href="/terms" class="hover:underline">Terms</a>
+        <a href="/about/" class="hover:underline">About</a>
+        <a href="/privacy-policy/" class="hover:underline">Privacy</a>
+        <a href="/terms/" class="hover:underline">Terms</a>
+        <a href="/contact/" class="hover:underline">Contact</a>
       </div>
       <p class="mb-2">🐒 Monkey Bomb Tag Guide & Tools — Fan-made companion site. Not affiliated with Roblox Corporation or Crazay Games.</p>
       <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
