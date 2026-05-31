@@ -1,0 +1,92 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { getCosmetics, getCases } from '@/lib/data';
+const cosmetics = getCosmetics();
+const cases = getCases();
+const bombs = cosmetics.filter(c => c.type === 'bomb');
+const effects = cosmetics.filter(c => c.type === 'effect');
+const emotes = cosmetics.filter(c => c.type === 'emote');
+const RC: Record<string,string> = {Common:'text-gray-500',Uncommon:'text-green-600',Rare:'text-blue-600',Epic:'text-purple-600',Legendary:'text-amber-500'};
+---
+<BaseLayout title="Monkey Bomb Tag Items & Skins — Complete Catalog" description="All items and skins in Monkey Bomb Tag. Bomb skins, effects, emotes with rarity, drop rates and how to unlock them from each case." path="/items/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Items & Skins',item:'https://monkey-bomb-tag.pages.dev/items/'}]}]} />
+<div class="max-w-5xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">Monkey Bomb Tag Items &amp; Skins</h1>
+  <p class="text-gray-500 text-sm mb-8">Complete catalog of all obtainable items — bomb skins, effects and emotes.</p>
+
+  <section class="mb-10">
+    <h2 class="text-xl font-bold mb-3">How Items Work</h2>
+    <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-sm text-gray-600 dark:text-gray-400">
+      <p class="mb-2">All items are obtained by opening <strong>Cases</strong> purchased with Bananas. Each case has a different drop rate table with rarities from Common to Legendary.</p>
+      <p>Rarity tiers: <span class="text-gray-500 font-bold">Common</span> → <span class="text-green-600 font-bold">Uncommon</span> → <span class="text-blue-600 font-bold">Rare</span> → <span class="text-purple-600 font-bold">Epic</span> → <span class="text-amber-500 font-bold">Legendary</span></p>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xl font-bold mb-4">Bomb Skins ({bombs.length})</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {bombs.map(b => (
+        <div class="p-3 rounded-xl border border-gray-200 dark:border-gray-800">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-sm">{b.name}</h3>
+            <span class={'text-xs font-bold '+(RC[b.rarity]||'')}>{b.rarity}</span>
+          </div>
+          <p class="text-xs text-gray-600 dark:text-gray-400">{b.description}</p>
+          <p class="text-xs text-gray-400 mt-1">Source: {b.source}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xl font-bold mb-4">Effects ({effects.length})</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {effects.map(e => (
+        <div class="p-3 rounded-xl border border-gray-200 dark:border-gray-800">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-sm">{e.name}</h3>
+            <span class={'text-xs font-bold '+(RC[e.rarity]||'')}>{e.rarity}</span>
+          </div>
+          <p class="text-xs text-gray-600 dark:text-gray-400">{e.description}</p>
+          <p class="text-xs text-gray-400 mt-1">Source: {e.source}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xl font-bold mb-4">Emotes ({emotes.length})</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {emotes.map(e => (
+        <div class="p-3 rounded-xl border border-gray-200 dark:border-gray-800">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-sm">{e.name}</h3>
+            <span class={'text-xs font-bold '+(RC[e.rarity]||'')}>{e.rarity}</span>
+          </div>
+          <p class="text-xs text-gray-600 dark:text-gray-400">{e.description}</p>
+          <p class="text-xs text-gray-400 mt-1">Source: {e.source}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">Available Cases</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {cases.map(c => (
+        <div class="flex justify-between items-center p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+          <div><span class="font-bold text-sm">{c.name}</span><span class="text-xs text-gray-500 ml-2">{c.description.slice(0,60)}</span></div>
+          <span class="font-mono font-bold text-amber-500 text-sm">🍌{c.price}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a href="/cosmetics/" class="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold">All Cosmetics</a>
+    <a href="/best-cases/" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">Best Cases</a>
+    <a href="/case-calculator/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">Case Calculator</a>
+  </div>
+</div>
+</BaseLayout>

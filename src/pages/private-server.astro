@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+---
+<BaseLayout title="Monkey Bomb Tag Private Server — How to Create & Join" description="How to create and join private servers in Monkey Bomb Tag. Play with friends, practice strategies and host custom games." path="/private-server/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Private Server',item:'https://monkey-bomb-tag.pages.dev/private-server/'}]}]} />
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">Private Servers in Monkey Bomb Tag</h1>
+  <p class="text-gray-500 text-sm mb-8">How to create, join and use private servers to play with friends.</p>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">What Is a Private Server?</h2>
+    <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">A private server is your own instance of Monkey Bomb Tag where only invited players can join. It's perfect for playing with friends, practicing strategies, or hosting custom games without random players.</p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">How to Create a Private Server</h2>
+    <div class="space-y-3">
+      <div class="flex gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <span class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+        <div><p class="font-bold text-sm">Go to the game page on Roblox</p><p class="text-xs text-gray-600 dark:text-gray-400">Open Monkey Bomb Tag's Roblox page.</p></div>
+      </div>
+      <div class="flex gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <span class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+        <div><p class="font-bold text-sm">Click the "Server" tab</p><p class="text-xs text-gray-600 dark:text-gray-400">Navigate to the Servers section on the game page.</p></div>
+      </div>
+      <div class="flex gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <span class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+        <div><p class="font-bold text-sm">Create Private Server</p><p class="text-xs text-gray-600 dark:text-gray-400">Click "Create Private Server" and give it a name. Some games may charge Robux for private servers.</p></div>
+      </div>
+      <div class="flex gap-3 p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <span class="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">4</span>
+        <div><p class="font-bold text-sm">Invite friends</p><p class="text-xs text-gray-600 dark:text-gray-400">Share the server link or invite friends directly through Roblox.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">Benefits of Private Servers</h2>
+    <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+      <li><strong>Play with friends only</strong> — no random players disrupting your games.</li>
+      <li><strong>Practice strategies</strong> — try out new movement techniques without pressure.</li>
+      <li><strong>Fewer lag issues</strong> — smaller player count often means better performance.</li>
+      <li><strong>Custom rules</strong> — agree on house rules with your group (e.g., no wall jumping, melee only).</li>
+      <li><strong>Screenshot and video recording</strong> — clean environment for content creation.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">Tips for Private Server Games</h2>
+    <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+      <li>Use private servers to practice wall jumps and movement without the pressure of real games.</li>
+      <li>Set up 1v1 Duels with a friend to improve your reaction time. Use the <a href="/bomb-timer/" class="text-green-600 hover:underline font-semibold">Bomb Timer</a> to practice timing.</li>
+      <li>Test different strategies from our <a href="/best-strategy/" class="text-green-600 hover:underline font-semibold">Best Strategy guide</a> in a controlled environment.</li>
+      <li>Invite fewer players for longer rounds — great for learning map layouts in detail.</li>
+    </ul>
+  </section>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a href="/beginner-guide/" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">Beginner Guide</a>
+    <a href="/how-to-win/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">How to Win</a>
+    <a href="/bomb-timer/" class="px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-semibold">Bomb Timer</a>
+  </div>
+</div>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+---
+<BaseLayout title="Monkey Bomb Tag Mobile Guide — Controls & Tips" description="How to play Monkey Bomb Tag on mobile (iOS/Android). Touch controls, performance tips, movement techniques and best settings for mobile players." path="/mobile-guide/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Mobile Guide',item:'https://monkey-bomb-tag.pages.dev/mobile-guide/'}]}]} />
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">Monkey Bomb Tag Mobile Guide</h1>
+  <p class="text-gray-500 text-sm mb-8">How to play and win on iOS and Android — controls, settings and movement tips.</p>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">Mobile Controls</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div class="p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sm mb-1">Movement</h3>
+        <p class="text-xs text-gray-600 dark:text-gray-400">Use the left virtual joystick to move. Drag in any direction to walk, run and navigate the map.</p>
+      </div>
+      <div class="p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sm mb-1">Jump / Wall Jump</h3>
+        <p class="text-xs text-gray-600 dark:text-gray-400">Tap the jump button. Tap again while touching a wall to wall jump. Chain multiple wall jumps by pressing jump at the right moment.</p>
+      </div>
+      <div class="p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sm mb-1">Tag / Pass Bomb</h3>
+        <p class="text-xs text-gray-600 dark:text-gray-400">Run into another player while holding the bomb to tag them. The bomb transfers automatically on contact.</p>
+      </div>
+      <div class="p-3 rounded-lg border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sm mb-1">Camera</h3>
+        <p class="text-xs text-gray-600 dark:text-gray-400">Swipe the screen to rotate camera. Use camera lock settings in Roblox for smoother control during fast-paced rounds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">Best Mobile Settings</h2>
+    <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+      <li><strong>Enable Dynamic Thumbstick</strong> in Roblox settings for more responsive movement.</li>
+      <li><strong>Reduce graphics quality</strong> to 1-3 bars for smoother gameplay on older devices.</li>
+      <li><strong>Turn on Shift Lock</strong> if available — helps with camera control during chases.</li>
+      <li><strong>Increase sensitivity</strong> for faster camera rotation when tracking the bomb carrier.</li>
+      <li><strong>Close background apps</strong> before playing to free up memory and reduce lag.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">Mobile Movement Tips</h2>
+    <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+      <li><strong>Wall jumping is harder on mobile.</strong> Practice the timing in our <a href="/bomb-timer/" class="text-green-600 hover:underline font-semibold">Bomb Timer</a> while getting used to the controls.</li>
+      <li><strong>Use two thumbs</strong> — left for movement joystick, right for jump and camera.</li>
+      <li><strong>Avoid open areas</strong> on mobile — you're harder to tag when near walls and platforms.</li>
+      <li><strong>Pre-aim your escape route</strong> before the bomb comes near you.</li>
+      <li><strong>Play on a stable connection.</strong> WiFi is better than mobile data for consistent performance.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">Mobile vs PC Differences</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead><tr class="border-b border-gray-200 dark:border-gray-800"><th class="text-left py-2">Feature</th><th class="text-center py-2">Mobile</th><th class="text-center py-2">PC</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-gray-100 dark:border-gray-900"><td class="py-2">Controls</td><td class="py-2 text-center">Touch joystick</td><td class="py-2 text-center">WASD + Mouse</td></tr>
+          <tr class="border-b border-gray-100 dark:border-gray-900"><td class="py-2">Wall Jump</td><td class="py-2 text-center">Harder (timing)</td><td class="py-2 text-center">Easier (spacebar)</td></tr>
+          <tr class="border-b border-gray-100 dark:border-gray-900"><td class="py-2">Camera</td><td class="py-2 text-center">Swipe</td><td class="py-2 text-center">Mouse look</td></tr>
+          <tr class="border-b border-gray-100 dark:border-gray-900"><td class="py-2">Graphics</td><td class="py-2 text-center">Lower (performance)</td><td class="py-2 text-center">Higher</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a href="/beginner-guide/" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">Beginner Guide</a>
+    <a href="/how-to-win/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">How to Win</a>
+    <a href="/bomb-timer/" class="px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-semibold">Bomb Timer</a>
+    <a href="/faq/" class="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold">FAQ</a>
+  </div>
+</div>
+</BaseLayout>

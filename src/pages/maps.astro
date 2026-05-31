@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { getMaps } from '@/lib/data';
+const maps = getMaps();
+const DC: Record<string,string> = {Easy:'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300',Medium:'bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300',Hard:'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'};
+---
+<BaseLayout title="Monkey Bomb Tag Maps — All Maps, Tips & Strategies" description="Complete guide to all Monkey Bomb Tag maps. Difficulty ratings, layout tips, best strategies and shortcuts for every map in the game." path="/maps/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Maps',item:'https://monkey-bomb-tag.pages.dev/maps/'}]}]} />
+<div class="max-w-5xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">All Maps in Monkey Bomb Tag</h1>
+  <p class="text-gray-500 text-sm mb-8">Every map with difficulty rating, layout tips and winning strategies.</p>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-4">Map Overview</h2>
+    <div class="space-y-4">
+      {maps.map(m => (
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="font-bold text-base">{m.name}</h3>
+            <span class={'text-xs font-bold px-2 py-0.5 rounded '+(DC[m.difficulty]||'')}>{m.difficulty}</span>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{m.description}</p>
+          {m.tips && m.tips.length > 0 && (
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-3">
+              <h4 class="font-bold text-xs mb-1">Tips:</h4>
+              <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-0.5 list-disc list-inside">
+                {m.tips.map(tip => <li>{tip}</li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-xl font-bold mb-3">General Map Tips</h2>
+    <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+      <li><strong>Learn every map.</strong> Knowing shortcuts and hiding spots gives a massive advantage over other players.</li>
+      <li><strong>Multi-level maps favor evaders.</strong> Use vertical space — wall jump to higher platforms to escape the bomb carrier.</li>
+      <li><strong>Open maps favor the carrier.</strong> On flat maps, the carrier can chase more easily. Stay near obstacles and walls.</li>
+      <li><strong>Practice on each map.</strong> Each map has unique features — some have vines, others have grid layouts or tight corridors.</li>
+    </ul>
+  </section>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a href="/wiki/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">Wiki</a>
+    <a href="/how-to-win/" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">How to Win</a>
+    <a href="/bomb-timer/" class="px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-semibold">Bomb Timer</a>
+  </div>
+</div>
+</BaseLayout>

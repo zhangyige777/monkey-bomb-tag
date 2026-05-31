@@ -5,7 +5,7 @@ const title = 'Monkey Bomb Tag Bomb Timer — Practice Tool';
 const desc = 'Practice the Monkey Bomb Tag bomb timer online for free. Improve your reaction time before the bomb explodes.';
 ---
 <BaseLayout title={title} description={desc} path="/bomb-timer/">
-<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Bomb Timer',item:'https://monkey-bomb-tag.pages.dev/bomb-timer/'}]}]} />
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Bomb Timer',item:'https://monkey-bomb-tag.pages.dev/bomb-timer/'}]},{'@context':'https://schema.org','@type':'SoftwareApplication','name':'Monkey Bomb Tag Bomb Timer','applicationCategory':'GameApplication','operatingSystem':'Web','offers':{'@type':'Offer','price':'0','priceCurrency':'USD'}}]} />
 <div class="max-w-3xl mx-auto px-4 py-10">
   <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">💣 Bomb Timer Simulator</h1>
   <p class="text-gray-500 text-sm mb-8">Practice your timing. Hit PASS before it explodes!</p>
@@ -34,7 +34,7 @@ const desc = 'Practice the Monkey Bomb Tag bomb timer online for free. Improve y
 </div>
 <script is:inline>
 let interval,seconds;
-function startTimer(s){clearInterval(interval);seconds=s;document.getElementById('pass-btn').disabled=false;const d=document.getElementById('timer-display'),st=document.getElementById('timer-status');st.textContent='💣 Tick tick tick...';d.className='text-7xl font-black text-green-500 mb-4';interval=setInterval(()=>{seconds--;d.textContent=seconds;if(seconds<=5)d.className='text-7xl font-black text-red-500 mb-4';else if(seconds<=10)d.className='text-7xl font-black text-amber-500 mb-4';if(seconds<=0){clearInterval(interval);d.textContent='💥';st.textContent='BOOM! Too slow!';document.getElementById('pass-btn').disabled=true;}},1000);}
-function passBomb(){clearInterval(interval);document.getElementById('timer-display').textContent='✅';document.getElementById('timer-display').className='text-7xl font-black text-green-500 mb-4';document.getElementById('timer-status').textContent='Passed with '+seconds+'s to spare!';document.getElementById('pass-btn').disabled=true;}
+function startTimer(s){clearInterval(interval);seconds=s;document.getElementById('pass-btn').disabled=false;const d=document.getElementById('timer-display'),st=document.getElementById('timer-status');st.textContent='💣 Tick tick tick...';d.className='text-7xl font-black text-green-500 mb-4';if(typeof trackEvent==='function')trackEvent('timer_start',{duration:s});interval=setInterval(()=>{seconds--;d.textContent=seconds;if(seconds<=5)d.className='text-7xl font-black text-red-500 mb-4';else if(seconds<=10)d.className='text-7xl font-black text-amber-500 mb-4';if(seconds<=0){clearInterval(interval);d.textContent='💥';st.textContent='BOOM! Too slow!';document.getElementById('pass-btn').disabled=true;}},1000);}
+function passBomb(){clearInterval(interval);document.getElementById('timer-display').textContent='✅';document.getElementById('timer-display').className='text-7xl font-black text-green-500 mb-4';document.getElementById('timer-status').textContent='Passed with '+seconds+'s to spare!';document.getElementById('pass-btn').disabled=true;if(typeof trackEvent==='function')trackEvent('timer_pass',{remaining:seconds});}
 </script>
 </BaseLayout>

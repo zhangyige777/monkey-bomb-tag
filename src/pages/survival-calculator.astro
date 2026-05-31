@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLd from '@/components/JsonLd.astro';
 ---
 <BaseLayout title="Monkey Bomb Tag Survival Odds Calculator" description="Calculate your win probability in Monkey Bomb Tag based on players, skill level and game mode." path="/survival-calculator/">
-<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Survival Calculator',item:'https://monkey-bomb-tag.pages.dev/survival-calculator/'}]}]} />
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Survival Calculator',item:'https://monkey-bomb-tag.pages.dev/survival-calculator/'}]},{'@context':'https://schema.org','@type':'SoftwareApplication','name':'Monkey Bomb Tag Survival Calculator','applicationCategory':'GameApplication','operatingSystem':'Web','offers':{'@type':'Offer','price':'0','priceCurrency':'USD'}}]} />
 <div class="max-w-3xl mx-auto px-4 py-10">
   <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">📊 Survival Odds Calculator</h1>
   <p class="text-gray-500 text-sm mb-8">Estimate your chances of winning.</p>
@@ -20,8 +20,11 @@ import JsonLd from '@/components/JsonLd.astro';
     <a href="/bomb-timer/" class="px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-semibold">💣 Bomb Timer</a>
     <a href="/beginner-guide/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">📖 Improve Skills</a>
   </div>
+  <div class="mt-6 p-3 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-xs text-gray-500">
+    <strong>Disclaimer:</strong> This calculator provides estimates based on player inputs, not official game data. Actual results may vary.
+  </div>
 </div>
 <script is:inline>
-function calc(){const p=parseInt(document.getElementById('players').value);document.getElementById('pv').textContent=p;const sk=parseFloat(document.getElementById('skill').value);const mm=parseFloat(document.getElementById('mode').value);let prob=(sk*mm/p)*100;if(prob>95)prob=95;if(prob<2)prob=2;document.getElementById('result').textContent=Math.round(prob)+'%';}calc();
+function calc(){const p=parseInt(document.getElementById('players').value);document.getElementById('pv').textContent=p;const sk=parseFloat(document.getElementById('skill').value);const mm=parseFloat(document.getElementById('mode').value);let prob=(sk*mm/p)*100;if(prob>95)prob=95;if(prob<2)prob=2;document.getElementById('result').textContent=Math.round(prob)+'%';if(typeof trackEvent==='function')trackEvent('calculator_submit',{tool:'survival',players:p,skill:sk,mode:mm});}calc();
 </script>
 </BaseLayout>

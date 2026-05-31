@@ -4,12 +4,34 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 <BaseLayout title="Privacy Policy — Monkey Bomb Tag Guide" description="Privacy policy for Monkey Bomb Tag Guide fan site." path="/privacy-policy/">
 <div class="max-w-3xl mx-auto px-4 py-10">
   <h1 class="text-2xl font-extrabold mb-4">Privacy Policy</h1>
-  <div class="text-sm text-gray-600 dark:text-gray-400 space-y-3">
+  <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4">
     <p><strong>Last updated:</strong> May 31, 2026</p>
-    <p>This site uses Google Analytics for anonymous usage data. No personal information is collected.</p>
-    <p>Google Analytics uses cookies for standard analytics. Not used for advertising.</p>
-    <p>We may link to third-party sites. We are not responsible for their privacy practices.</p>
-    <p>This site is for all ages. We do not collect data from children beyond anonymous analytics.</p>
+
+    <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Google Analytics (GA4)</h2>
+    <p>We use Google Analytics 4 to collect anonymous usage data such as page views, time on site, and device type. This helps us understand how visitors use the site and improve content. GA4 data is aggregated and cannot identify individual users.</p>
+
+    <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Cookies</h2>
+    <p>Google Analytics sets the following cookies:</p>
+    <ul class="list-disc list-inside space-y-1">
+      <li><code class="text-xs bg-gray-100 dark:bg-gray-800 px-1 rounded">_ga</code> — distinguishes unique visitors (2 years)</li>
+      <li><code class="text-xs bg-gray-100 dark:bg-gray-800 px-1 rounded">_ga_*</code> — maintains session state (2 years)</li>
+    </ul>
+    <p>You can disable cookies in your browser settings. The site functions normally without cookies.</p>
+
+    <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">localStorage</h2>
+    <p>Our calculators and tools may use browser localStorage to remember your last input values for convenience. No personal data is stored — only tool settings like selected game mode or number values.</p>
+
+    <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Advertising</h2>
+    <p>We display ads through third-party ad networks. These networks may use their own cookies and tracking technologies to serve relevant advertisements. We do not control third-party ad network cookies. Please review their privacy policies for details.</p>
+
+    <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Third-Party Links</h2>
+    <p>Our site may link to external sites (Roblox, developer social media, etc.). We are not responsible for the privacy practices of these third-party sites.</p>
+
+    <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Children's Privacy</h2>
+    <p>This site is designed for all ages and relates to a Roblox game. We do not knowingly collect personal information from children. All analytics data is anonymous and cannot be used to identify any individual.</p>
+
+    <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Contact</h2>
+    <p>Questions about this policy? <a href="/contact/" class="text-green-600 hover:underline font-semibold">Contact us</a>.</p>
   </div>
 </div>
 </BaseLayout>

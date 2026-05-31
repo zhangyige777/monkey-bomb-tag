@@ -5,7 +5,7 @@ import { getCases } from '@/lib/data';
 const cases = getCases();
 ---
 <BaseLayout title="Monkey Bomb Tag Case Drop Rate Calculator" description="Calculate your odds of getting rare items from Monkey Bomb Tag cases. See exact drop rates and costs." path="/case-calculator/">
-<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Case Calculator',item:'https://monkey-bomb-tag.pages.dev/case-calculator/'}]}]} />
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Case Calculator',item:'https://monkey-bomb-tag.pages.dev/case-calculator/'}]},{'@context':'https://schema.org','@type':'SoftwareApplication','name':'Monkey Bomb Tag Case Calculator','applicationCategory':'GameApplication','operatingSystem':'Web','offers':{'@type':'Offer','price':'0','priceCurrency':'USD'}}]} />
 <div class="max-w-3xl mx-auto px-4 py-10">
   <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">🧮 Case Drop Calculator</h1>
   <p class="text-gray-500 text-sm mb-8">Your odds and how many openings you need.</p>
@@ -28,7 +28,7 @@ const cases = getCases();
 <div id="case-data" data-cases={JSON.stringify(cases.map(c=>({id:c.id,price:c.price,dr:c.dropRates})))} style="display:none"></div>
 <script is:inline>
 const D=JSON.parse(document.getElementById('case-data').dataset.cases);
-function calc(){const c=D.find(x=>x.id===document.getElementById('cs').value);const r=document.getElementById('rar').value;const n=parseInt(document.getElementById('n').value)||1;const p=(c.dr.find(d=>d.rarity===r)||{chance:0}).chance;const ch=(1-Math.pow(1-p,n))*100;document.getElementById('chance').textContent=Math.min(ch,99.9).toFixed(1)+'%';document.getElementById('avg').textContent=Math.round(1/p);document.getElementById('cost').textContent=(n*c.price).toLocaleString()+'🍌';document.getElementById('c50').textContent=Math.round(Math.log(0.5)/Math.log(1-p)*c.price).toLocaleString()+'🍌';}
+function calc(){const c=D.find(x=>x.id===document.getElementById('cs').value);const r=document.getElementById('rar').value;const n=parseInt(document.getElementById('n').value)||1;const p=(c.dr.find(d=>d.rarity===r)||{chance:0}).chance;const ch=(1-Math.pow(1-p,n))*100;document.getElementById('chance').textContent=Math.min(ch,99.9).toFixed(1)+'%';document.getElementById('avg').textContent=Math.round(1/p);document.getElementById('cost').textContent=(n*c.price).toLocaleString()+'🍌';document.getElementById('c50').textContent=Math.round(Math.log(0.5)/Math.log(1-p)*c.price).toLocaleString()+'🍌';if(typeof trackEvent==='function')trackEvent('calculator_submit',{tool:'case',case_id:document.getElementById('cs').value,rarity:r,openings:n});}
 calc();
 </script>
 </BaseLayout>

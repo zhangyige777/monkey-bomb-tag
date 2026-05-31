@@ -1,0 +1,96 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+---
+<BaseLayout title="Monkey Bomb Tag Glossary — All Terms Explained" description="Complete Monkey Bomb Tag glossary. Every term explained: Bananas, Cases, Tails, Bomb Timer, Survival, Duels, Ranked, Epic, Legendary and more." path="/glossary/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Glossary',item:'https://monkey-bomb-tag.pages.dev/glossary/'}]}]} />
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">Monkey Bomb Tag Glossary</h1>
+  <p class="text-gray-500 text-sm mb-8">Every term you need to know — explained simply.</p>
+
+  <div class="space-y-4">
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Bananas</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">The in-game currency earned by playing rounds. Win = ~40 Bananas, Loss = ~15 Bananas. Used to buy Cases for cosmetics. See <a href="/banana-farming/" class="text-green-600 hover:underline">Banana Farming Guide</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Bomb Timer</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">The countdown clock on the bomb. Usually 15-30 seconds. When it hits zero, whoever holds the bomb is eliminated. Practice with our <a href="/bomb-timer/" class="text-green-600 hover:underline">Bomb Timer tool</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Cases</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Loot boxes purchased with Bananas. Each case contains cosmetic items (Tails, Bomb Skins, Effects, Emotes) with varying rarity. See <a href="/best-cases/" class="text-green-600 hover:underline">Best Cases</a> for recommendations.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Classic Mode</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">The standard game mode. 16 players, one bomb, last monkey standing wins. ~8 games per hour.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Codes</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Promotional codes released by developers for free Bananas and rewards. Redeem at the Codes Chest in the lobby. See <a href="/codes/" class="text-green-600 hover:underline">all active codes</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Cosmetics</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Visual customization items including Tails, Bomb Skins, Effects and Emotes. Obtained through Cases. See <a href="/cosmetics/" class="text-green-600 hover:underline">full cosmetics catalog</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Duels</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">1v1 game mode. Shorter rounds, faster games (~12/hr), best for Banana farming. See <a href="/best-strategy/" class="text-green-600 hover:underline">Duels strategy</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Effects</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Visual effects applied to your character. Obtained from the Effects Case. Purely cosmetic — no gameplay impact.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Emotes</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Animations your character can perform. Obtained from the Emote Case. Purely cosmetic.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Epic</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Second-highest rarity tier (purple). Above Rare, below Legendary. Moderate drop rate from most cases.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Legendary</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Highest rarity tier (gold/amber). Very low drop rate. The most sought-after items. Void Crate has the best Legendary rates.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Lava Mode</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Special round variant where the floor becomes lava. Stay on platforms and use wall jumps to survive.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Ranked Mode</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Competitive mode with a ranking system. Games are slower (~6/hr) but reward competitive players. Lower Banana rate than Duels.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Tag</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">To touch another player while holding the bomb, passing it to them. The core mechanic of the game.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Tails</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Cosmetic tail items for your monkey character. Obtained from Tails Case and Void Crate. Ranked by rarity and appearance. See <a href="/best-tails/" class="text-green-600 hover:underline">Best Tails</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Tier List</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">A ranking system from S (best) to D (worst) for items like cases, tails and cosmetics. See our <a href="/tier-list/" class="text-green-600 hover:underline">complete tier list</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Void Crate</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">The most expensive case at 500 Bananas. Has the best drop rates for Epic and Legendary items. See <a href="/best-cases/" class="text-green-600 hover:underline">case comparison</a>.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Wall Jump</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Jump toward a wall and press jump again on contact to bounce off. Essential skill for evading the bomb carrier. Can be chained multiple times.</p>
+    </div>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+      <h2 class="font-bold text-base mb-1">Weekly Quests</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">Special challenges that reset each week. Completing them gives bonus Bananas on top of normal round earnings.</p>
+    </div>
+  </div>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a href="/wiki/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">Wiki</a>
+    <a href="/faq/" class="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold">FAQ</a>
+    <a href="/beginner-guide/" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">Beginner Guide</a>
+  </div>
+</div>
+</BaseLayout>
