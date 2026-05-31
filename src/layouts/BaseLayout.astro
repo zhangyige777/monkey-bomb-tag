@@ -26,6 +26,8 @@ const image = ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.svg`;
   <meta name="keywords" content={config.seo.primaryKeywords.concat(config.seo.secondaryKeywords).join(', ')} />
   <link rel="canonical" href={url} />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#16a34a" />
 
   <!-- OG -->
   <meta property="og:title" content={title} />

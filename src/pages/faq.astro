@@ -1,0 +1,32 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import FAQItem from '@/components/FAQItem.astro';
+---
+<BaseLayout title="Monkey Bomb Tag FAQ — Frequently Asked Questions" description="All your Monkey Bomb Tag questions answered. Codes, best cases, banana farming, bomb timer, game modes and more in this complete FAQ." path="/faq/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'FAQ',item:'https://monkey-bomb-tag.pages.dev/faq/'}]},{'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':'Are there Monkey Bomb Tag codes?','acceptedAnswer':{'@type':'Answer','text':'Yes! The developers regularly release codes for free Bananas and cosmetics. Check our Codes page for all working codes.'}},{'@type':'Question','name':'How do I redeem codes?','acceptedAnswer':{'@type':'Answer','text':'Find the Codes Chest in the lobby (left side), type your code, and press Redeem. See our Code Location page for detailed steps.'}},{'@type':'Question','name':'What is the best case?','acceptedAnswer':{'@type':'Answer','text':'Void Crate (500 Bananas) has the best overall drop rates for Epic and Legendary items. Tails Case (250 Bananas) is the best budget option.'}},{'@type':'Question','name':'How do I get bananas fast?','acceptedAnswer':{'@type':'Answer','text':'Win rounds in Duels mode for the fastest Banana earnings. Use our Banana Calculator to compare modes and estimate your hourly rate.'}},{'@type':'Question','name':'How does the bomb timer work?','acceptedAnswer':{'@type':'Answer','text':'The bomb timer counts down from 15-30 seconds. When it hits zero, the player holding the bomb is eliminated. Practice with our Bomb Timer tool.'}},{'@type':'Question','name':'Is this an official site?','acceptedAnswer':{'@type':'Answer','text':'No. This is a fan-made companion site and is not affiliated with Roblox Corporation or Crazay Games.'}}]}]} />
+<div class="max-w-4xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">Monkey Bomb Tag FAQ</h1>
+  <p class="text-gray-500 text-sm mb-8">Frequently asked questions about Monkey Bomb Tag on Roblox.</p>
+
+  <div class="space-y-3 mb-8">
+    <FAQItem question="Are there Monkey Bomb Tag codes?" answer="Yes! The developers regularly release codes for free Bananas and cosmetics. New codes usually come with game updates, milestone celebrations, and special events. Check our Codes page for all currently working codes." />
+    <FAQItem question="How do I redeem codes in Monkey Bomb Tag?" answer="Find the Codes Chest in the lobby on the left side near the spawn area. Click on it, type your code exactly as shown (codes are case-sensitive), and press Redeem. See our Code Location page for detailed step-by-step instructions." />
+    <FAQItem question="What is the best case to open?" answer="Void Crate (500 Bananas) has the best overall drop rates for Epic and Legendary items. For budget players, Tails Case (250 Bananas) offers good value. Visit our Best Cases page for a full ROI analysis of every case." />
+    <FAQItem question="How do I get Bananas fast?" answer="The fastest way to earn Bananas is by winning rounds in Duels mode (~12 games/hour). Classic mode earns less per hour but is more relaxed. Use our Banana Calculator to compare modes and estimate your hourly earnings." />
+    <FAQItem question="How does the bomb timer work?" answer="The bomb timer counts down from 15 to 30 seconds depending on the round type. When it reaches zero, the player holding the bomb is eliminated. The bomb flashes faster in the last 5 seconds. Practice timing with our Bomb Timer tool." />
+    <FAQItem question="What game modes are available?" answer="Monkey Bomb Tag has four modes: Classic (standard tag), Ranked (competitive with ranking system), Duels (1v1), and Weekly Quests. Each mode has different Banana earning rates." />
+    <FAQItem question="How do I get Legendary items?" answer="Legendary items come from Void Crate (500 Bananas) with the highest Legendary drop rate. You can also get some Legendaries from special event cases. Use our Case Calculator to see your exact odds." />
+    <FAQItem question="Is this an official Monkey Bomb Tag site?" answer="No. This is a fan-made companion site created by players, for players. We are not affiliated with Roblox Corporation, Crazay Games, or Syn. All game data is collected from gameplay and community sources." />
+    <FAQItem question="How often do you update codes?" answer="We check for new codes regularly and update our list as soon as they're confirmed working. Codes may expire without notice — always check the Last Checked date on our Codes page." />
+    <FAQItem question="Can I play on mobile or console?" answer="Yes! Monkey Bomb Tag is available on Roblox which supports PC, mobile (iOS/Android), and Xbox. Controls differ by platform — see our Beginner Guide for platform-specific tips." />
+  </div>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a href="/codes/" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">All Codes</a>
+    <a href="/best-cases/" class="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold">Best Cases</a>
+    <a href="/beginner-guide/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">Beginner Guide</a>
+    <a href="/bomb-timer/" class="px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-semibold">Bomb Timer</a>
+  </div>
+</div>
+</BaseLayout>

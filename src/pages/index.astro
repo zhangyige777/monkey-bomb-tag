@@ -5,8 +5,8 @@ import FAQItem from '@/components/FAQItem.astro';
 import { getActiveCodes, getGameConfig } from '@/lib/data';
 const config = getGameConfig();
 const activeCodes = getActiveCodes();
-const title = 'Monkey Bomb Tag Codes, Tier List & Tools';
-const desc = 'Working codes, best cases & tails tier list, bomb timer, calculators, beginner guide and complete wiki. Updated daily.';
+const title = 'Monkey Bomb Tag Tools — Codes, Bomb Timer & Calculators';
+const desc = 'Use Monkey Bomb Tag tools for active codes, bomb timer practice, survival calculator, banana farming, case odds, and beginner strategy.';
 ---
 <BaseLayout title={title} description={desc} path="/">
 <JsonLd schema={[
@@ -21,20 +21,23 @@ const desc = 'Working codes, best cases & tails tier list, bomb timer, calculato
 
 <section class="bg-gradient-to-br from-green-50 via-emerald-50 to-amber-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 py-12 px-4">
   <div class="max-w-5xl mx-auto text-center">
-    <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-4">Monkey Bomb Tag Guide &amp; Tools</h1>
-    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">Codes, tools, tier lists &amp; guides — everything you need for Monkey Bomb Tag on Roblox.</p>
+    <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-4">Monkey Bomb Tag Tools</h1>
+    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">Active codes, bomb timer, calculators, guides and everything for Monkey Bomb Tag on Roblox.</p>
     <div class="flex flex-col sm:flex-row justify-center gap-3">
       <a href="/codes/" class="px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-colors">Codes ({activeCodes.length} Active)</a>
       <a href="/bomb-timer/" class="px-6 py-3 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-600 transition-colors">Bomb Timer</a>
-      <a href="/case-calculator/" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">Calculator</a>
+      <a href="/survival-calculator/" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">Survival Calculator</a>
+      <a href="/banana-calculator/" class="px-6 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition-colors">Banana Calculator</a>
     </div>
   </div>
 </section>
 
 <section class="max-w-5xl mx-auto px-4 py-10">
   <h2 class="text-xl font-extrabold mb-6 text-center">What is Monkey Bomb Tag?</h2>
-  <div class="max-w-3xl mx-auto prose dark:prose-invert text-sm text-gray-600 dark:text-gray-400">
-    <p>Monkey Bomb Tag is a popular Roblox party game where players pass a ticking bomb by tagging each other. The last monkey standing wins! With over <strong>{config.stats.visits}</strong> visits and a <strong>91%</strong> rating, it's one of the fastest-growing tag games on Roblox. Collect <strong>Bananas</strong> to open <strong>Cases</strong> for Tails, Bomb Skins, Effects and Emotes. Play Classic, Ranked, Duels and Weekly Quests modes.</p>
+  <div class="max-w-3xl mx-auto text-sm text-gray-600 dark:text-gray-400">
+    <p class="mb-3">Monkey Bomb Tag is a popular Roblox party game where players pass a ticking bomb by tagging each other. The last monkey standing wins! With over <strong>{config.stats.visits}</strong> visits and a <strong>91%</strong> rating, it's one of the fastest-growing tag games on Roblox.</p>
+    <p class="mb-3"><strong>How it works:</strong> Each round, one player starts with the bomb. Tag another player to pass it before the timer hits zero. If you're holding the bomb when it explodes — you're out! Rounds continue until one player remains.</p>
+    <p>Collect <strong>Bananas</strong> by winning rounds. Spend them on <strong>Cases</strong> for Tails, Bomb Skins, Effects and Emotes. Play <strong>Classic</strong>, <strong>Ranked</strong>, <strong>Duels</strong> and <strong>Weekly Quests</strong> modes.</p>
   </div>
 </section>
 
@@ -50,8 +53,13 @@ const desc = 'Working codes, best cases & tails tier list, bomb timer, calculato
       {href:'/survival-calculator/',t:'Survival Odds',d:'Win probability'},
       {href:'/banana-calculator/',t:'Banana Calc',d:'Earnings calculator'},
       {href:'/case-calculator/',t:'Case Calc',d:'Drop rate calculator'},
-      {href:'/beginner-guide/',t:'Beginner Guide',d:'How to play & win'},
-      {href:'/banana-farm-guide/',t:'Farm Guide',d:'Fastest Bananas'},
+      {href:'/how-to-win/',t:'How to Win',d:'Strategies & tips'},
+      {href:'/best-strategy/',t:'Best Strategy',d:'Advanced tactics'},
+      {href:'/banana-farming/',t:'Banana Farming',d:'Fastest earnings'},
+      {href:'/cosmetics/',t:'Cosmetics',d:'All items catalog'},
+      {href:'/beginner-guide/',t:'Beginner Guide',d:'How to play'},
+      {href:'/code-location/',t:'Code Location',d:'Where to redeem'},
+      {href:'/faq/',t:'FAQ',d:'Common questions'},
       {href:'/wiki/',t:'Wiki',d:'Maps, modes & items'},
       {href:'/updates/',t:'Updates',d:'Patch notes'},
     ].map(l => (
@@ -60,6 +68,16 @@ const desc = 'Working codes, best cases & tails tier list, bomb timer, calculato
         <div class="text-xs text-gray-500">{l.d}</div>
       </a>
     ))}
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-6 border-t border-gray-200 dark:border-gray-800">
+  <h2 class="text-xl font-extrabold mb-4 text-center">Best Pages for New Players</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
+    <a href="/beginner-guide/" class="block p-3 rounded-xl bg-green-50 dark:bg-green-950/20 border border-green-200 text-center"><div class="font-bold text-sm">Beginner Guide</div><div class="text-xs text-gray-500">Learn the basics</div></a>
+    <a href="/how-to-win/" class="block p-3 rounded-xl bg-blue-50 dark:bg-blue-950/20 border border-blue-200 text-center"><div class="font-bold text-sm">How to Win</div><div class="text-xs text-gray-500">Win strategies</div></a>
+    <a href="/banana-farming/" class="block p-3 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 text-center"><div class="font-bold text-sm">Banana Farming</div><div class="text-xs text-gray-500">Earn faster</div></a>
+    <a href="/bomb-timer/" class="block p-3 rounded-xl bg-red-50 dark:bg-red-950/20 border border-red-200 text-center"><div class="font-bold text-sm">Bomb Timer</div><div class="text-xs text-gray-500">Practice timing</div></a>
   </div>
 </section>
 
@@ -94,11 +112,11 @@ const desc = 'Working codes, best cases & tails tier list, bomb timer, calculato
 <section class="max-w-3xl mx-auto px-4 py-10 border-t border-gray-200 dark:border-gray-800">
   <h2 class="text-xl font-extrabold mb-6 text-center">FAQ</h2>
   <div class="space-y-3">
-    <FAQItem question="What is Monkey Bomb Tag?" answer="Monkey Bomb Tag is a free Roblox party game by Crazay Games (Syn). Players pass a ticking bomb by tagging — last monkey standing wins! Collect Bananas, open Cases and customize your monkey with Tails, Bomb Skins, Effects and Emotes." />
-    <FAQItem question="How do I redeem codes?" answer="Find the codes chest in the lobby (left side), enter your code, and claim. Check our Codes page for all working codes updated regularly." />
-    <FAQItem question="What are Bananas for?" answer="Bananas are the in-game currency used to buy Cases. Cases contain Tails, Bomb Skins, Effects & Emotes of varying rarity from Common to Legendary." />
-    <FAQItem question="What are the best cases to open?" answer="Void Crate (500 Bananas) has the best overall drop rates for Epic and Legendary items. Tails Case (250 Bananas) is the best budget option. See our Best Cases page for full ROI analysis." />
-    <FAQItem question="Is Monkey Bomb Tag free?" answer="Yes! Monkey Bomb Tag is completely free on Roblox (PC, Mobile, Xbox). All cosmetics are earnable through gameplay — no pay-to-win." />
+    <FAQItem question="What is Monkey Bomb Tag?" answer="Monkey Bomb Tag is a free Roblox party game by Crazay Games (Syn). Players pass a ticking bomb by tagging — last monkey standing wins! Collect Bananas, open Cases and customize your monkey." />
+    <FAQItem question="How do I redeem codes?" answer="Find the codes chest in the lobby (left side), enter your code, and claim. See our Code Location page for step-by-step instructions." />
+    <FAQItem question="What are the best cases to open?" answer="Void Crate (500 Bananas) has the best overall drop rates. Tails Case (250 Bananas) is the best budget option. See our Best Cases page for full ROI analysis." />
+    <FAQItem question="How do I get Bananas fast?" answer="Play Duels mode for the fastest Banana earnings (~330/hr). Use our Banana Calculator to compare modes." />
+    <FAQItem question="Is Monkey Bomb Tag free?" answer="Yes! Monkey Bomb Tag is completely free on Roblox (PC, Mobile, Xbox). All cosmetics are earnable through gameplay." />
   </div>
 </section>
 </BaseLayout>

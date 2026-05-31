@@ -1,0 +1,81 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { getCases, getTails, getCosmetics } from '@/lib/data';
+const cases = getCases();
+const tails = getTails();
+const cosmetics = getCosmetics();
+const RC: Record<string,string> = {Common:'bg-gray-200 dark:bg-gray-700',Uncommon:'bg-green-200 dark:bg-green-900',Rare:'bg-blue-200 dark:bg-blue-900',Epic:'bg-purple-200 dark:bg-purple-900',Legendary:'bg-amber-200 dark:bg-amber-900'};
+const RT: Record<string,string> = {Common:'text-gray-600',Uncommon:'text-green-600',Rare:'text-blue-600',Epic:'text-purple-600',Legendary:'text-amber-600'};
+---
+<BaseLayout title="Monkey Bomb Tag Cosmetics — All Items, Cases & Tails" description="Complete guide to Monkey Bomb Tag cosmetics. All cases, tails, bomb skins, effects and emotes with drop rates, rarity and how to get them." path="/cosmetics/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Cosmetics',item:'https://monkey-bomb-tag.pages.dev/cosmetics/'}]}]} />
+<div class="max-w-5xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">Monkey Bomb Tag Cosmetics Guide</h1>
+  <p class="text-gray-500 text-sm mb-8">All cases, tails, bomb skins, effects and emotes — complete catalog with drop rates.</p>
+
+  <section class="mb-10">
+    <h2 class="text-xl font-bold mb-4">All Cases</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {cases.map(c => (
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="font-bold">{c.name}</h3>
+            <span class="font-mono font-bold text-amber-500 text-sm">🍌{c.price}</span>
+          </div>
+          <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">{c.description}</p>
+          <div class="space-y-1">{c.dropRates.map(dr => (
+            <div class="flex items-center gap-2">
+              <span class={'text-xs font-semibold px-1.5 py-0.5 rounded '+(RC[dr.rarity]||'')}> {dr.rarity}</span>
+              <div class="flex-1 h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden"><div class="h-full bg-green-500 rounded-full" style={'width:'+Math.min(dr.chance*100,100)+'%'}></div></div>
+              <span class="text-xs font-mono w-10 text-right">{(dr.chance*100).toFixed(0)}%</span>
+            </div>
+          ))}</div>
+        </div>
+      ))}
+    </div>
+    <p class="mt-3"><a href="/best-cases/" class="text-green-600 hover:underline text-sm font-semibold">See best cases ranked by value &rarr;</a></p>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xl font-bold mb-4">All Tails</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {tails.map(t => (
+        <div class="p-3 rounded-xl border border-gray-200 dark:border-gray-800">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-bold text-sm">{t.name}</h3>
+            <span class={'text-xs font-bold '+(RT[t.rarity]||'')}>{t.rarity}</span>
+          </div>
+          <p class="text-xs text-gray-600 dark:text-gray-400">{t.description}</p>
+          <p class="text-xs text-gray-400 mt-1">Source: {t.source} · {(t.dropRate*100).toFixed(0)}% drop</p>
+        </div>
+      ))}
+    </div>
+    <p class="mt-3"><a href="/best-tails/" class="text-green-600 hover:underline text-sm font-semibold">See best tails ranked &rarr;</a></p>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xl font-bold mb-4">Bomb Skins, Effects & Emotes</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead><tr class="border-b border-gray-200 dark:border-gray-800"><th class="text-left py-2">Name</th><th class="text-left py-2">Type</th><th class="text-left py-2">Rarity</th><th class="text-left py-2">Source</th></tr></thead>
+        <tbody>{cosmetics.map(c => (
+          <tr class="border-b border-gray-100 dark:border-gray-900">
+            <td class="py-2 font-medium">{c.name}</td>
+            <td class="py-2 capitalize">{c.type}</td>
+            <td class="py-2"><span class={'text-xs font-bold '+(RT[c.rarity]||'')}>{c.rarity}</span></td>
+            <td class="py-2 text-xs text-gray-500">{c.source}</td>
+          </tr>
+        ))}</tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+    <a href="/best-cases/" class="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold">Best Cases</a>
+    <a href="/best-tails/" class="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold">Best Tails</a>
+    <a href="/case-calculator/" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">Case Calculator</a>
+    <a href="/banana-calculator/" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">Banana Calc</a>
+  </div>
+</div>
+</BaseLayout>

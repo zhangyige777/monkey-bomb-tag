@@ -1,0 +1,16 @@
+{
+  "name": "Monkey Bomb Tag Guide & Tools",
+  "short_name": "MBT Guide",
+  "description": "Working codes, tier lists, calculators and guides for Monkey Bomb Tag on Roblox.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
