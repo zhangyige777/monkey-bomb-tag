@@ -1,0 +1,127 @@
+{
+  "gameName": "Monkey Bomb Tag",
+  "lastUpdated": "2026-05-31",
+  "tails": [
+    {
+      "id": "cotton-tail",
+      "slug": "cotton-tail",
+      "name": "Cotton Tail",
+      "rarity": "Common",
+      "tier": "D",
+      "source": "Tails Case",
+      "dropRate": 0.30,
+      "description": "A fluffy white cotton tail. The most basic tail cosmetic — everyone starts here.",
+      "tags": ["common", "tails-case", "starter"]
+    },
+    {
+      "id": "squirrel-tail",
+      "slug": "squirrel-tail",
+      "name": "Squirrel Tail",
+      "rarity": "Common",
+      "tier": "D",
+      "source": "Tails Case",
+      "dropRate": 0.25,
+      "description": "A bushy squirrel tail. Slightly more detailed than the Cotton Tail but still very common.",
+      "tags": ["common", "tails-case"]
+    },
+    {
+      "id": "fox-tail",
+      "slug": "fox-tail",
+      "name": "Fox Tail",
+      "rarity": "Uncommon",
+      "tier": "C",
+      "source": "Tails Case",
+      "dropRate": 0.15,
+      "description": "A sleek orange fox tail with a white tip. A nice step up in visual quality.",
+      "tags": ["uncommon", "tails-case"]
+    },
+    {
+      "id": "bunny-tail",
+      "slug": "bunny-tail",
+      "name": "Bunny Tail",
+      "rarity": "Uncommon",
+      "tier": "C",
+      "source": "Tails Case",
+      "dropRate": 0.10,
+      "description": "A round, puffy bunny tail. Cute and bouncy-looking.",
+      "tags": ["uncommon", "tails-case"]
+    },
+    {
+      "id": "wolf-tail",
+      "slug": "wolf-tail",
+      "name": "Wolf Tail",
+      "rarity": "Rare",
+      "tier": "B",
+      "source": "Tails Case",
+      "dropRate": 0.06,
+      "description": "A thick gray wolf tail. Fierce-looking and well-animated.",
+      "tags": ["rare", "tails-case"]
+    },
+    {
+      "id": "tiger-tail",
+      "slug": "tiger-tail",
+      "name": "Tiger Tail",
+      "rarity": "Rare",
+      "tier": "B",
+      "source": "Void Crate",
+      "dropRate": 0.15,
+      "description": "A striped tiger tail with vibrant orange and black pattern. One of the best-looking rare tails.",
+      "tags": ["rare", "void-crate", "best-looking"]
+    },
+    {
+      "id": "dragon-tail",
+      "slug": "dragon-tail",
+      "name": "Dragon Tail",
+      "rarity": "Epic",
+      "tier": "A",
+      "source": "Tails Case",
+      "dropRate": 0.03,
+      "description": "A scaled green dragon tail with spikes. Intimidating and highly sought after.",
+      "tags": ["epic", "tails-case", "premium-look"]
+    },
+    {
+      "id": "phoenix-tail",
+      "slug": "phoenix-tail",
+      "name": "Phoenix Tail",
+      "rarity": "Epic",
+      "tier": "A",
+      "source": "Tails Case",
+      "dropRate": 0.02,
+      "description": "A fiery phoenix tail with animated flame effects. Glows in-game and looks spectacular.",
+      "tags": ["epic", "tails-case", "glowing"]
+    },
+    {
+      "id": "galaxy-tail",
+      "slug": "galaxy-tail",
+      "name": "Galaxy Tail",
+      "rarity": "Legendary",
+      "tier": "S",
+      "source": "Tails Case",
+      "dropRate": 0.008,
+      "description": "A cosmic tail with swirling galaxy pattern. Animated stars and nebula effects. The rarest tail from the Tails Case.",
+      "tags": ["legendary", "tails-case", "animated", "rarest"]
+    },
+    {
+      "id": "void-dominus-tail",
+      "slug": "void-dominus-tail",
+      "name": "Void Dominus Tail",
+      "rarity": "Legendary",
+      "tier": "S",
+      "source": "Void Crate",
+      "dropRate": 0.03,
+      "description": "The ultimate tail cosmetic. Dark void energy with pulsing purple effects. Exclusive to the Void Crate and the most prestigious tail in the game.",
+      "tags": ["legendary", "void-crate", "exclusive", "prestige"]
+    },
+    {
+      "id": "nebula-tail",
+      "slug": "nebula-tail",
+      "name": "Nebula Tail",
+      "rarity": "Epic",
+      "tier": "A",
+      "source": "Void Crate",
+      "dropRate": 0.10,
+      "description": "A beautiful nebula-themed tail with swirling purple and blue colors. Decent drop rate from the Void Crate.",
+      "tags": ["epic", "void-crate"]
+    }
+  ]
+}

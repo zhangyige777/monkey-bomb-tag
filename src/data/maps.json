@@ -1,0 +1,105 @@
+{
+  "gameName": "Monkey Bomb Tag",
+  "lastUpdated": "2026-05-31",
+  "maps": [
+    {
+      "id": "jungle-temple",
+      "name": "Jungle Temple",
+      "slug": "jungle-temple",
+      "difficulty": "Easy",
+      "description": "A classic jungle temple map with wide corridors and open courtyards. Great for beginners learning the basics of tagging and dodging.",
+      "tips": [
+        "Stay near the outer edges to avoid getting cornered",
+        "Use the temple pillars as cover when being chased",
+        "The central courtyard is dangerous — avoid it when holding the bomb"
+      ],
+      "tags": ["easy", "starter", "wide"]
+    },
+    {
+      "id": "treehouse-village",
+      "name": "Treehouse Village",
+      "slug": "treehouse-village",
+      "difficulty": "Medium",
+      "description": "A vertical map with interconnected treehouses and rope bridges. Requires good movement skills including wall jumps and vine swings.",
+      "tips": [
+        "Master wall jumping to access the upper platforms quickly",
+        "Rope bridges are choke points — avoid them when holding the bomb",
+        "Drop down from treehouses to escape chasers"
+      ],
+      "tags": ["medium", "vertical", "movement"]
+    },
+    {
+      "id": "crystal-caves",
+      "name": "Crystal Caves",
+      "slug": "crystal-caves",
+      "difficulty": "Medium",
+      "description": "An underground cave system with narrow tunnels and glowing crystals. Limited visibility makes stealth a viable strategy.",
+      "tips": [
+        "Use the dark corners to hide when holding the bomb",
+        "Crystal formations block line of sight — use them to juke chasers",
+        "Memorize the tunnel layout for quick escapes"
+      ],
+      "tags": ["medium", "underground", "stealth"]
+    },
+    {
+      "id": "lava-fortress",
+      "name": "Lava Fortress",
+      "slug": "lava-fortress",
+      "difficulty": "Hard",
+      "description": "A dangerous fortress surrounded by lava pits. Environmental hazards add an extra layer of danger — fall in and you're eliminated regardless of the bomb.",
+      "tips": [
+        "Never stop moving on narrow lava bridges",
+        "Push opponents toward lava edges when chasing",
+        "The elevated platforms are safe zones but easy to get trapped on"
+      ],
+      "tags": ["hard", "lava", "hazards"]
+    },
+    {
+      "id": "sky-islands",
+      "name": "Sky Islands",
+      "slug": "sky-islands",
+      "difficulty": "Hard",
+      "description": "Floating islands high in the sky with gaps between them. One wrong jump means elimination. The most movement-skill-intensive map.",
+      "tips": [
+        "Always have an escape route planned before the bomb comes to you",
+        "Long jumps between islands are risky but rewarding",
+        "Stay on the larger islands — small platforms are death traps"
+      ],
+      "tags": ["hard", "vertical", "precision"]
+    },
+    {
+      "id": "grid-arena",
+      "name": "Grid Arena",
+      "slug": "grid-arena",
+      "difficulty": "Easy",
+      "description": "A flat, grid-based arena with no elevation changes. Pure tag gameplay with no environmental distractions. Popular for competitive duels.",
+      "tips": [
+        "Keep moving in unpredictable patterns",
+        "The flat layout means nowhere to hide — pure speed wins",
+        "Great for practicing basic tag and dodge mechanics"
+      ],
+      "tags": ["easy", "flat", "competitive", "duels"]
+    },
+    {
+      "id": "factory",
+      "name": "Factory",
+      "slug": "factory",
+      "difficulty": "Medium",
+      "description": "An industrial factory map with conveyor belts, moving platforms, and machinery. Dynamic elements keep every round feeling fresh.",
+      "tips": [
+        "Use conveyor belts to gain speed when fleeing",
+        "Moving platforms can separate you from chasers",
+        "Listen for machinery sounds to predict platform movements"
+      ],
+      "tags": ["medium", "dynamic", "industrial"]
+    },
+    {
+      "id": "ancient-ruins",
+      "name": "Ancient Ruins",
+      "slug": "ancient-ruins",
+      "difficulty": "Hard",
+      "description": "Crumbling ancient ruins with collapsing floors and hidden passages. The map changes during the round as structures break apart.",
+      "tags": ["hard", "dynamic", "crumbling"]
+    }
+  ]
+}

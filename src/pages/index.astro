@@ -1,0 +1,80 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import FAQItem from '@/components/FAQItem.astro';
+import { getActiveCodes, getGameConfig } from '@/lib/data';
+const config = getGameConfig();
+const activeCodes = getActiveCodes();
+const title = 'Monkey Bomb Tag Codes, Tier List & Tools';
+const desc = 'Working codes, best cases & tails tier list, bomb timer, calculators, beginner guide and complete wiki. Updated daily.';
+---
+<BaseLayout title={title} description={desc} path="/">
+<JsonLd schema={[
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'}] },
+  { '@context':'https://schema.org','@type':'VideoGame', name:'Monkey Bomb Tag', description:'Roblox party tag game', genre:'Party / Tag', url:'https://www.roblox.com/games/108843562394237', operatingSystem:'Roblox (PC, Mobile, Xbox)', author:{'@type':'Organization',name:'Crazay Games (Syn)'} },
+  { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
+    {'@type':'Question',name:'What is Monkey Bomb Tag?',acceptedAnswer:{'@type':'Answer',text:'A Roblox party game where players pass a ticking bomb by tagging. Last monkey standing wins!'}},
+    {'@type':'Question',name:'How do I get free codes?',acceptedAnswer:{'@type':'Answer',text:'Visit our Codes page for all working codes. Redeem at the codes chest in the lobby.'}},
+    {'@type':'Question',name:'What are the best cases?',acceptedAnswer:{'@type':'Answer',text:'Void Crate (500 Bananas) has the best drop rates. Tails Case (250) for budget.'}},
+  ]}
+]} />
+
+<section class="bg-gradient-to-br from-green-50 via-emerald-50 to-amber-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 py-12 px-4">
+  <div class="max-w-5xl mx-auto text-center">
+    <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-4"><span class="text-green-500">🐒</span> Monkey Bomb Tag</h1>
+    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">Codes, tools, tier lists & guides — everything you need.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-3">
+      <a href="/codes" class="px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-colors">🎫 Codes ({activeCodes.length} Active)</a>
+      <a href="/bomb-timer" class="px-6 py-3 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-600 transition-colors">💣 Bomb Timer</a>
+      <a href="/case-calculator" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">🧮 Calculator</a>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-10">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+    {[
+      {href:'/codes',e:'🎫',t:'Codes',d:'Working promo codes'},
+      {href:'/tier-list',e:'🏆',t:'Tier List',d:'S-C rankings'},
+      {href:'/best-cases',e:'📦',t:'Best Cases',d:'ROI analysis'},
+      {href:'/best-tails',e:'🐒',t:'Best Tails',d:'All tails ranked'},
+      {href:'/bomb-timer',e:'💣',t:'Bomb Timer',d:'Practice the timer'},
+      {href:'/survival-calculator',e:'📊',t:'Survival Odds',d:'Win probability'},
+      {href:'/banana-calculator',e:'🍌',t:'Banana Calc',d:'Earnings calculator'},
+      {href:'/case-calculator',e:'🧮',t:'Case Calc',d:'Drop rate calculator'},
+      {href:'/beginner-guide',e:'📖',t:'Guide',d:'How to play & win'},
+      {href:'/banana-farm-guide',e:'🍌',t:'Farm Guide',d:'Fastest Bananas'},
+      {href:'/wiki',e:'📚',t:'Wiki',d:'Maps, modes & items'},
+      {href:'/updates',e:'🆕',t:'Updates',d:'Patch notes'},
+    ].map(l => (
+      <a href={l.href} class="block p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+        <div class="text-xl mb-1">{l.e}</div>
+        <div class="font-bold text-sm">{l.t}</div>
+        <div class="text-xs text-gray-500">{l.d}</div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-10 border-t border-gray-200 dark:border-gray-800">
+  <h2 class="text-xl font-extrabold mb-6 text-center">Game Stats</h2>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+    {[{l:'Visits',v:config.stats.visits,c:'text-green-500'},{l:'Favorites',v:config.stats.favorites,c:'text-amber-500'},{l:'Active',v:config.stats.onlineNow,c:'text-blue-500'},{l:'Server',v:config.stats.serverSize+' players',c:'text-purple-500'}].map(s=>(
+      <div class="text-center p-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+        <div class={'text-xl font-black '+s.c}>{s.v}</div>
+        <div class="text-xs text-gray-500">{s.l}</div>
+      </div>
+    ))}
+  </div>
+  <p class="text-center text-xs text-gray-400 mt-3">Last checked: {config.stats.lastChecked} · Stats change frequently.</p>
+</section>
+
+<section class="max-w-3xl mx-auto px-4 py-10 border-t border-gray-200 dark:border-gray-800">
+  <h2 class="text-xl font-extrabold mb-6 text-center">FAQ</h2>
+  <div class="space-y-3">
+    <FAQItem question="How do I redeem codes?" answer="Find the codes chest in the lobby (left side), enter your code, and claim." />
+    <FAQItem question="What are Bananas for?" answer="In-game currency to buy Cases with Tails, Bomb Skins, Effects & Emotes." />
+    <FAQItem question="Is it free?" answer="Yes! Monkey Bomb Tag is free on Roblox. All cosmetics are earnable through gameplay." />
+  </div>
+</section>
+</BaseLayout>

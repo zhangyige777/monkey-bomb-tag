@@ -1,0 +1,91 @@
+{
+  "gameName": "Monkey Bomb Tag",
+  "lastUpdated": "2026-05-31",
+  "cases": [
+    {
+      "id": "tails-case",
+      "name": "Tails Case",
+      "slug": "tails-case",
+      "price": 250,
+      "currency": "bananas",
+      "tier": "B",
+      "description": "A standard case containing various tail cosmetics for your monkey. Good value for beginners looking to customize their look.",
+      "dropRates": [
+        { "rarity": "Common", "chance": 0.60, "example": "Cotton Tail, Squirrel Tail" },
+        { "rarity": "Uncommon", "chance": 0.25, "example": "Fox Tail, Bunny Tail" },
+        { "rarity": "Rare", "chance": 0.10, "example": "Tiger Tail, Wolf Tail" },
+        { "rarity": "Epic", "chance": 0.04, "example": "Dragon Tail, Phoenix Tail" },
+        { "rarity": "Legendary", "chance": 0.01, "example": "Galaxy Tail" }
+      ],
+      "tags": ["tails", "standard"]
+    },
+    {
+      "id": "effects-case",
+      "name": "Effects Case",
+      "slug": "effects-case",
+      "price": 300,
+      "currency": "bananas",
+      "tier": "B",
+      "description": "Contains trail effects and visual auras. These effects make your monkey stand out during gameplay.",
+      "dropRates": [
+        { "rarity": "Common", "chance": 0.55, "example": "Sparkle Trail, Smoke Trail" },
+        { "rarity": "Uncommon", "chance": 0.25, "example": "Fire Trail, Ice Trail" },
+        { "rarity": "Rare", "chance": 0.12, "example": "Lightning Aura, Rainbow Trail" },
+        { "rarity": "Epic", "chance": 0.06, "example": "Galaxy Aura, Shadow Effect" },
+        { "rarity": "Legendary", "chance": 0.02, "example": "Cosmic Effect" }
+      ],
+      "tags": ["effects", "standard"]
+    },
+    {
+      "id": "bomb-case",
+      "name": "Bomb Case",
+      "slug": "bomb-case",
+      "price": 200,
+      "currency": "bananas",
+      "tier": "C",
+      "description": "Contains bomb skins that change the appearance of the monkey bomb. Cheapest case but limited to bomb cosmetics only.",
+      "dropRates": [
+        { "rarity": "Common", "chance": 0.65, "example": "Classic Bomb, Cherry Bomb" },
+        { "rarity": "Uncommon", "chance": 0.20, "example": "Watermelon Bomb, Coconut Bomb" },
+        { "rarity": "Rare", "chance": 0.10, "example": "Golden Bomb, Diamond Bomb" },
+        { "rarity": "Epic", "chance": 0.04, "example": "Lava Bomb" },
+        { "rarity": "Legendary", "chance": 0.01, "example": "Void Bomb" }
+      ],
+      "tags": ["bombs", "budget"]
+    },
+    {
+      "id": "emote-case",
+      "name": "Emote Case",
+      "slug": "emote-case",
+      "price": 200,
+      "currency": "bananas",
+      "tier": "C",
+      "description": "Contains emotes and dance animations. Fun cosmetics but no gameplay impact. Good for showing off after a win.",
+      "dropRates": [
+        { "rarity": "Common", "chance": 0.60, "example": "Wave, Nod" },
+        { "rarity": "Uncommon", "chance": 0.25, "example": "Dance, Spin" },
+        { "rarity": "Rare", "chance": 0.10, "example": "Backflip, Worm" },
+        { "rarity": "Epic", "chance": 0.04, "example": "Breakdance" },
+        { "rarity": "Legendary", "chance": 0.01, "example": "Victory Dance" }
+      ],
+      "tags": ["emotes", "budget"]
+    },
+    {
+      "id": "void-crate",
+      "name": "Void Crate",
+      "slug": "void-crate",
+      "price": 500,
+      "currency": "bananas",
+      "tier": "S",
+      "description": "The premium crate with the best drop rates for rare items. Contains exclusive cosmetics not found in other cases, including the coveted Void-themed items.",
+      "dropRates": [
+        { "rarity": "Common", "chance": 0.40, "example": "Void Trail, Shadow Tail" },
+        { "rarity": "Uncommon", "chance": 0.25, "example": "Void Bomb, Nebula Effect" },
+        { "rarity": "Rare", "chance": 0.20, "example": "Tiger Tail, Void Emote" },
+        { "rarity": "Epic", "chance": 0.10, "example": "Galaxy Tail, Cosmic Bomb" },
+        { "rarity": "Legendary", "chance": 0.05, "example": "Void Dominus Tail, Ultra Effects" }
+      ],
+      "tags": ["premium", "void", "best-value"]
+    }
+  ]
+}

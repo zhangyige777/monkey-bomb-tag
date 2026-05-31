@@ -1,0 +1,11 @@
+---
+interface Props { question: string; answer: string; }
+const { question, answer } = Astro.props;
+---
+<details class="group p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+  <summary class="font-bold cursor-pointer list-none flex justify-between items-center">
+    <span>{question}</span>
+    <span class="text-gray-400 group-open:rotate-180 transition-transform text-xl">▾</span>
+  </summary>
+  <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">{answer}</p>
+</details>

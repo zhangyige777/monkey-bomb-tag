@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://monkey-bomb-tag.pages.dev/sitemap-index.xml

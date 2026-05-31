@@ -1,0 +1,174 @@
+{
+  "gameName": "Monkey Bomb Tag",
+  "lastUpdated": "2026-05-31",
+  "cosmetics": [
+    {
+      "id": "classic-bomb",
+      "name": "Classic Bomb",
+      "type": "bomb",
+      "rarity": "Common",
+      "source": "Default",
+      "description": "The default monkey bomb skin. Simple but iconic."
+    },
+    {
+      "id": "cherry-bomb",
+      "name": "Cherry Bomb",
+      "type": "bomb",
+      "rarity": "Common",
+      "source": "Bomb Case",
+      "description": "A red cherry-styled bomb. Juicy explosion effect."
+    },
+    {
+      "id": "watermelon-bomb",
+      "name": "Watermelon Bomb",
+      "type": "bomb",
+      "rarity": "Uncommon",
+      "source": "Bomb Case",
+      "description": "A green watermelon bomb that splatters on explosion."
+    },
+    {
+      "id": "coconut-bomb",
+      "name": "Coconut Bomb",
+      "type": "bomb",
+      "rarity": "Uncommon",
+      "source": "Bomb Case",
+      "description": "A tropical coconut bomb with a satisfying crack effect."
+    },
+    {
+      "id": "golden-bomb",
+      "name": "Golden Bomb",
+      "type": "bomb",
+      "rarity": "Rare",
+      "source": "Bomb Case",
+      "description": "A shiny golden bomb. Blinding explosion with gold particles."
+    },
+    {
+      "id": "diamond-bomb",
+      "name": "Diamond Bomb",
+      "type": "bomb",
+      "rarity": "Rare",
+      "source": "Bomb Case",
+      "description": "A crystalline diamond bomb with sparkle explosion."
+    },
+    {
+      "id": "lava-bomb",
+      "name": "Lava Bomb",
+      "type": "bomb",
+      "rarity": "Epic",
+      "source": "Bomb Case",
+      "description": "A molten lava bomb with fiery explosion. Leaves lava pools after detonation."
+    },
+    {
+      "id": "void-bomb",
+      "name": "Void Bomb",
+      "type": "bomb",
+      "rarity": "Legendary",
+      "source": "Bomb Case",
+      "description": "A dark void bomb that creates a black hole effect on explosion. The rarest bomb skin."
+    },
+    {
+      "id": "sparkle-trail",
+      "name": "Sparkle Trail",
+      "type": "effect",
+      "rarity": "Common",
+      "source": "Effects Case",
+      "description": "Leave a trail of sparkles as you run."
+    },
+    {
+      "id": "smoke-trail",
+      "name": "Smoke Trail",
+      "type": "effect",
+      "rarity": "Common",
+      "source": "Effects Case",
+      "description": "A smoky trail effect behind your monkey."
+    },
+    {
+      "id": "fire-trail",
+      "name": "Fire Trail",
+      "type": "effect",
+      "rarity": "Uncommon",
+      "source": "Effects Case",
+      "description": "Flames trail behind you as you sprint."
+    },
+    {
+      "id": "ice-trail",
+      "name": "Ice Trail",
+      "type": "effect",
+      "rarity": "Uncommon",
+      "source": "Effects Case",
+      "description": "A frosty ice trail with snowflake particles."
+    },
+    {
+      "id": "lightning-aura",
+      "name": "Lightning Aura",
+      "type": "effect",
+      "rarity": "Rare",
+      "source": "Effects Case",
+      "description": "Electrical aura surrounding your monkey. Crackle effects when moving."
+    },
+    {
+      "id": "rainbow-trail",
+      "name": "Rainbow Trail",
+      "type": "effect",
+      "rarity": "Rare",
+      "source": "Effects Case",
+      "description": "A vibrant rainbow trail. Changes colors as you move."
+    },
+    {
+      "id": "galaxy-aura",
+      "name": "Galaxy Aura",
+      "type": "effect",
+      "rarity": "Epic",
+      "source": "Effects Case",
+      "description": "Cosmic galaxy aura with swirling stars and nebula."
+    },
+    {
+      "id": "cosmic-effect",
+      "name": "Cosmic Effect",
+      "type": "effect",
+      "rarity": "Legendary",
+      "source": "Effects Case",
+      "description": "The ultimate effect. Full cosmic transformation with animated universe backdrop."
+    },
+    {
+      "id": "wave-emote",
+      "name": "Wave",
+      "type": "emote",
+      "rarity": "Common",
+      "source": "Emote Case",
+      "description": "A simple wave animation."
+    },
+    {
+      "id": "dance-emote",
+      "name": "Dance",
+      "type": "emote",
+      "rarity": "Uncommon",
+      "source": "Emote Case",
+      "description": "A fun dance animation."
+    },
+    {
+      "id": "backflip-emote",
+      "name": "Backflip",
+      "type": "emote",
+      "rarity": "Rare",
+      "source": "Emote Case",
+      "description": "An impressive backflip animation."
+    },
+    {
+      "id": "breakdance-emote",
+      "name": "Breakdance",
+      "type": "emote",
+      "rarity": "Epic",
+      "source": "Emote Case",
+      "description": "An extended breakdance routine."
+    },
+    {
+      "id": "victory-dance-emote",
+      "name": "Victory Dance",
+      "type": "emote",
+      "rarity": "Legendary",
+      "source": "Emote Case",
+      "description": "The ultimate victory celebration. Confetti and fireworks included."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLd from '@/components/JsonLd.astro';
+---
+<BaseLayout title="Banana Earnings Calculator" description="Calculate how many Bananas you earn per hour in Monkey Bomb Tag. Compare modes and estimate time to unlock cases." path="/banana-calculator/">
+<JsonLd schema={[{ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://monkey-bomb-tag.pages.dev/'},{'@type':'ListItem',position:2,name:'Banana Calculator',item:'https://monkey-bomb-tag.pages.dev/banana-calculator/'}]}]} />
+<div class="max-w-3xl mx-auto px-4 py-10">
+  <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">🍌 Banana Earnings Calculator</h1>
+  <p class="text-gray-500 text-sm mb-8">How fast can you earn Bananas?</p>
+  <div class="space-y-4 mb-8">
+    <div><label class="block text-sm font-bold mb-1">Win Rate (%)</label><input id="wr" type="number" min="0" max="100" value="30" class="w-full p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900" oninput="calc()"></div>
+    <div><label class="block text-sm font-bold mb-1">Game Mode</label><select id="gph" class="w-full p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900" onchange="calc()"><option value="8">Classic (~8 games/hr)</option><option value="12">Duels (~12 games/hr)</option><option value="6">Ranked (~6 games/hr)</option></select></div>
+    <div class="flex items-center gap-2"><input id="x2" type="checkbox" class="w-4 h-4" onchange="calc()"><label for="x2" class="text-sm">2x Bananas Gamepass</label></div>
+  </div>
+  <div class="grid grid-cols-3 gap-3">
+    <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 text-center"><div class="text-xs text-gray-500">🍌/Hour</div><div id="bph" class="text-2xl font-black text-amber-500">320</div></div>
+    <div class="p-4 rounded-xl bg-green-50 dark:bg-green-950/20 border border-green-200 text-center"><div class="text-xs text-gray-500">Void Crate/hr</div><div id="vc" class="text-2xl font-black text-green-500">0.6</div></div>
+    <div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/20 border border-blue-200 text-center"><div class="text-xs text-gray-500">500🍌 in</div><div id="t500" class="text-2xl font-black text-blue-500">94min</div></div>
+  </div>
+  <div class="mt-6 flex flex-wrap gap-2">
+    <a href="/codes" class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-semibold">🎫 Free Codes</a>
+    <a href="/case-calculator" class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-semibold">🧮 Case Calculator</a>
+  </div>
+</div>
+<script is:inline>
+function calc(){const wr=parseInt(document.getElementById('wr').value)||0;const gph=parseInt(document.getElementById('gph').value);const x2=document.getElementById('x2').checked?2:1;const wins=Math.round(gph*wr/100);const bph=(wins*40+(gph-wins)*15)*x2;document.getElementById('bph').textContent=bph;document.getElementById('vc').textContent=(bph/500).toFixed(1);document.getElementById('t500').textContent=bph>0?Math.round(500/bph*60)+'min':'∞';}calc();
+</script>
+</BaseLayout>

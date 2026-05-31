@@ -1,0 +1,88 @@
+---
+import { getGameConfig } from '@/lib/data';
+import '@/styles/global.css';
+const config = getGameConfig();
+const SITE = config.seo.baseUrl;
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const { title, description, path, canonical, ogImage } = Astro.props;
+const url = canonical || `${SITE}${path}`;
+const image = ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.jpg`;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={config.seo.primaryKeywords.concat(config.seo.secondaryKeywords).join(', ')} />
+  <link rel="canonical" href={url} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- OG -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content={image} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Monkey Bomb Tag" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+
+  <!-- GA4 — 替换 G-XXXXXXXXXX 为真实 ID -->
+  <script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" async></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body class="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans antialiased">
+  <header class="border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="/" class="font-bold text-lg tracking-tight hover:text-green-600 transition-colors">
+        <span class="text-green-500">🐒</span> Monkey Bomb Tag
+        <span class="text-xs text-gray-400 ml-2 font-normal hidden sm:inline">Guide & Tools</span>
+      </a>
+      <nav class="flex items-center gap-1 text-sm font-medium overflow-x-auto max-w-[60vw]">
+        <a href="/codes" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Codes</a>
+        <a href="/tier-list" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Tier List</a>
+        <a href="/bomb-timer" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Timer</a>
+        <a href="/case-calculator" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Calculator</a>
+        <a href="/beginner-guide" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap hidden sm:block">Guide</a>
+        <a href="/wiki" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Wiki</a>
+        <a href="/updates" class="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap">Updates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="min-h-[calc(100vh-180px)]">
+    <slot />
+  </main>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 mt-16 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
+      <div class="flex justify-center gap-4 mb-3">
+        <a href="/about" class="hover:underline">About</a>
+        <a href="/privacy-policy" class="hover:underline">Privacy</a>
+        <a href="/terms" class="hover:underline">Terms</a>
+      </div>
+      <p class="mb-2">🐒 Monkey Bomb Tag Guide & Tools — Fan-made companion site. Not affiliated with Roblox Corporation or Crazay Games.</p>
+      <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

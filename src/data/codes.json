@@ -1,0 +1,55 @@
+{
+  "gameName": "Monkey Bomb Tag",
+  "lastUpdated": "2026-05-31",
+  "codes": [
+    {
+      "code": "M0NKE",
+      "reward": "150 Bananas",
+      "source": "Official Release",
+      "addedDate": "2026-03-15",
+      "status": "active",
+      "isNew": false
+    },
+    {
+      "code": "sixseven",
+      "reward": "500 Bananas",
+      "source": "Community Discovery",
+      "addedDate": "2026-04-20",
+      "status": "active",
+      "isNew": false
+    },
+    {
+      "code": "tripletmadness",
+      "reward": "500 Bananas",
+      "source": "Developer Social",
+      "addedDate": "2026-05-10",
+      "status": "active",
+      "isNew": false
+    },
+    {
+      "code": "Lava",
+      "reward": "500 Bananas",
+      "source": "Lava Mode Update",
+      "addedDate": "2026-05-28",
+      "status": "expired",
+      "isNew": false,
+      "note": "Previously reported active by TechWiser (May 31); not confirmed by AllThingsHow/Dexerto. Moved to expired."
+    },
+    {
+      "code": "launch",
+      "reward": "200 Bananas",
+      "source": "Launch Event",
+      "addedDate": "2026-01-15",
+      "status": "expired",
+      "isNew": false
+    },
+    {
+      "code": "orangutag",
+      "reward": "300 Bananas",
+      "source": "Cross-promo Event",
+      "addedDate": "2026-02-01",
+      "status": "expired",
+      "isNew": false
+    }
+  ]
+}
